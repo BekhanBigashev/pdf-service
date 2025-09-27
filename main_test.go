@@ -1,4 +1,4 @@
-package main
+package ilovepdf
 
 import (
 	"ilovepdf/router"

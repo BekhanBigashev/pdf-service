@@ -11,3 +11,9 @@ type AuthForm struct {
 	Email    string `json:"email"`
 	Password string `json:"password"`
 }
+
+// Структура состояния
+type BotUserState struct {
+	Step string            `json:"step"`
+	Data map[string]string `json:"data"`
+}

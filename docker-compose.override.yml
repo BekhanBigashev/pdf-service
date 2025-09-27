@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - .:/app
+    command: ["/go/bin/air", "-c", ".air.api.toml"]
+
+  bot:
+    build:
+      context: .
+      target: dev
+    volumes:
+      - .:/app
+    command: ["/go/bin/air", "-c", ".air.bot.toml"]
