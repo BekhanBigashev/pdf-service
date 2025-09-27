@@ -102,7 +102,7 @@ func HandleMergePDF(c *gin.Context) {
 	form, _ := c.MultipartForm()
 	files := form.File["files"]
 
-	merged, err := pdf.MergeFiles(files, c)
+	merged, err := pdf.MergeFiles(files)
 	if err != nil {
 		return
 	}
@@ -121,7 +121,7 @@ func HandleWatermark(c *gin.Context) {
 	form, _ := c.MultipartForm()
 	file := form.File["file"][0]
 
-	watermarked, err := pdf.AddWaterMark(file, c)
+	watermarked, err := pdf.AddWaterMark(file)
 	if err != nil {
 		c.JSON(500, gin.H{
 			"message": err.Error(),
