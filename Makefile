@@ -10,6 +10,9 @@ dev:
 prod:
 	$(PROD_COMPOSE) up --build -d
 
+ps:
+	$(PROD_COMPOSE) ps
+
 # Остановка всех контейнеров (dev + prod)
 down:
 	docker compose -f docker-compose.dev.yml -f docker-compose.prod.yml down
