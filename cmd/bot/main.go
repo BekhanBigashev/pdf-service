@@ -2,6 +2,8 @@
 package main
 
 import (
+	"context"
+	"ilovepdf/internal/redis"
 	"ilovepdf/internal/storage"
 	"ilovepdf/internal/telegram"
 	"log"
@@ -10,6 +12,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
+var ctx = context.Background()
+
 func main() {
 	err := godotenv.Load("/app/.env")
 	if err != nil {
@@ -17,5 +21,7 @@ func main() {
 	}
 
 	storage.InitDB()
-	telegram.StartBot(os.Getenv("TELEGRAM_BOT_TOKEN"))
+	redis.InitRedis()
+
+	telegram.StartBot(ctx, os.Getenv("TELEGRAM_BOT_TOKEN"))
 }

@@ -22,10 +22,8 @@ func Register(c *gin.Context) {
 		return
 	}
 
-	// Хэшируем пароль
 	hashedPassword, _ := bcrypt.GenerateFromPassword([]byte(input.Password), 14)
 
-	// Сохраняем в БД (псевдо)
 	user := models.User{Email: input.Email, Password: string(hashedPassword)}
 	storage.DB.Create(&user)
 
