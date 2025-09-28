@@ -6,12 +6,22 @@ services:
     command: ["/bin/api"]
     ports:
       - "8089:8080"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
 
   bot:
     build:
       context: .
       target: runtime
     command: ["/bin/bot"]
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+      - redis
 
   db:
     image: postgres:16
@@ -30,10 +40,10 @@ services:
     image: redis:7
     container_name: my-redis
     ports:
-      - "6379:6379"  # наружу, чтобы можно было подключаться с хоста
+      - "6379:6379"
     volumes:
-      - redis_data:/data  # сохраняем данные между перезапусками
-    command: ["redis-server", "--appendonly", "yes"] # включаем AOF для надежности
+      - redis_data:/data
+    command: ["redis-server", "--appendonly", "yes"]
 
 volumes:
   db_data:
