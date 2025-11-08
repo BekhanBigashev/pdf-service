@@ -2,11 +2,11 @@ package handlers
 
 import (
 	"fmt"
-	"ilovepdf/internal/pdf"
-	"ilovepdf/internal/storage"
-	"ilovepdf/models"
 	"net/http"
 	"os"
+	"pdf-service/internal/pdf"
+	"pdf-service/internal/storage"
+	"pdf-service/models"
 	"time"
 
 	"github.com/gin-gonic/gin"

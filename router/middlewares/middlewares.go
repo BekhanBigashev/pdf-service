@@ -1,9 +1,9 @@
 package middlewares
 
 import (
-	"ilovepdf/handlers"
 	"log"
 	"net/http"
+	"pdf-service/handlers"
 	"strings"
 
 	"github.com/gin-gonic/gin"

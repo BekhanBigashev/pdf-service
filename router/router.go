@@ -1,8 +1,8 @@
 package router
 
 import (
-	"ilovepdf/handlers"
-	"ilovepdf/router/middlewares"
+	"pdf-service/handlers"
+	"pdf-service/router/middlewares"
 	"strconv"
 
 	"github.com/gin-gonic/gin"

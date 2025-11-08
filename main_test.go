@@ -1,9 +1,9 @@
 package ilovepdf
 
 import (
-	"ilovepdf/router"
 	"net/http"
 	"net/http/httptest"
+	"pdf-service/router"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

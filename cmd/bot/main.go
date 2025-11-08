@@ -3,11 +3,11 @@ package main
 
 import (
 	"context"
-	"ilovepdf/internal/redis"
-	"ilovepdf/internal/storage"
-	"ilovepdf/internal/telegram"
 	"log"
 	"os"
+	"pdf-service/internal/redis"
+	"pdf-service/internal/storage"
+	"pdf-service/internal/telegram"
 
 	"github.com/joho/godotenv"
 )

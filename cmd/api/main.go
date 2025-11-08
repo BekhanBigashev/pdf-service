@@ -2,12 +2,11 @@ package main
 
 import (
 	"fmt"
-	"ilovepdf/internal/storage"
-	"ilovepdf/router"
+	"github.com/joho/godotenv"
 	"log"
 	"os"
-
-	"github.com/joho/godotenv"
+	"pdf-service/internal/storage"
+	"pdf-service/router"
 )
 
 func main() {

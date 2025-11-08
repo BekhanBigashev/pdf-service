@@ -3,8 +3,8 @@ package telegram
 import (
 	"context"
 	"fmt"
-	"ilovepdf/internal/redis"
 	"log"
+	"pdf-service/internal/redis"
 	"strconv"
 	"time"
 

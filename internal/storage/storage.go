@@ -2,9 +2,9 @@ package storage
 
 import (
 	"fmt"
-	"ilovepdf/models"
 	"log"
 	"os"
+	"pdf-service/models"
 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
